@@ -1,10 +1,14 @@
-name: GitHub Actions Demo
-on: 
+name: Run PowerShell Script on Schedule
+
+on:
   schedule:
-    - cron: "* * * * *"
+    - cron: '* * * * *' # This will run the job every day at midnight UTC
+
 jobs:
-  Explore-GitHub-Actions:
+  run_powershell_script:
+    name: Testing the Workflow
     runs-on: ubuntu-latest
+
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
