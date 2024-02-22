@@ -1,4 +1,4 @@
-name:Run Every Minute
+name: Run Every Minute
 on:
   schedule:
     - cron: '* * * * *'
